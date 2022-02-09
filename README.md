@@ -39,11 +39,29 @@ This repository contains the code and data download links to reproduce the exper
     
 	You can find respective scripts for running the experiments of the paper in the subfolders *lspc/* *abtbuy/* and *amazongoogle/*. Note that you need to adjust the file path in these scripts for your system (replace ```your_path``` with ```path/to/repo```).
 	
-	To run contrastive pre-training for the abtbuy dataset for example use ```bash abtbuy/run_pretraining_clean_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE (AUG)```. You need to specify batch site, learning rate and temperature as arguments here. Optionally you can also apply data augmentation by passing an augmentation method as last argument (use ```all-``` for the augmentation used in the paper).
-	For the WDC Computers data you need to also supply the size of the training set, e.g. ```bash lspc/run_pretraining_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE TRAIN_SIZE (AUG)```
+	* **Contrastive Pre-training**
 	
-	Finally, to use the pre-trained models for fine-tuning, run any of the fine-tuning scripts in the respective folders, e.g. ```bash abtbuy/run_finetune_siamese_frozen_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE (AUG)``` Please note, that BATCH_SIZE refers to the batch size used in pre-training. The fine-tuning batch size is locked to 64 but can be adjusted in the bash scripts if needed.
-	Analogously for fine-tuning WDC computers, add the train size: ```bash lspc/run_finetune_siamese_frozen_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE TRAIN_SIZE (AUG)```
+		To run contrastive pre-training for the abtbuy dataset for example use 
+
+		```bash abtbuy/run_pretraining_clean_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE (AUG)```
+
+		You need to specify batch site, learning rate and temperature as arguments here. Optionally you can also apply data augmentation by passing an augmentation method as last argument (use ```all-``` for the augmentation used in the paper).
+
+		For the WDC Computers data you need to also supply the size of the training set, e.g. 
+
+		```bash lspc/run_pretraining_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE TRAIN_SIZE (AUG)```
+	
+	* **Cross-entropy Fine-tuning**
+	
+		Finally, to use the pre-trained models for fine-tuning, run any of the fine-tuning scripts in the respective folders, e.g. 
+
+		```bash abtbuy/run_finetune_siamese_frozen_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE (AUG)``` 
+
+		Please note, that BATCH_SIZE refers to the batch size used in pre-training. The fine-tuning batch size is locked to 64 but can be adjusted in the bash scripts if needed.
+
+		Analogously for fine-tuning WDC computers, add the train size: 
+
+		```bash lspc/run_finetune_siamese_frozen_roberta.sh BATCH_SIZE LEARNING_RATE TEMPERATURE TRAIN_SIZE (AUG)```
 
 	
 --------
