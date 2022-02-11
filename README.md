@@ -1,6 +1,6 @@
 # Contrastive Product Matching
 
-This repository contains the code and data download links to reproduce the experiments of the paper "Supervised Contrastive Learning for Product Matching" by Ralph Peeters and Christian Bizer. [ArXiv link](https://arxiv.org/abs/2202.02098)
+This repository contains the code and data download links to reproduce the experiments of the paper "Supervised Contrastive Learning for Product Matching" by Ralph Peeters and Christian Bizer. [ArXiv link](https://arxiv.org/abs/2202.02098). A comparison of the results to other systems using different benchmark datasets is found at [Papers with Code - Entity Resolution](https://paperswithcode.com/task/entity-resolution/).
 
 * **Requirements**
 
